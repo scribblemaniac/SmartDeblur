@@ -171,7 +171,7 @@ void MainWindow::motionLengthChanged() {
 
 void MainWindow::motionAngleChanged() {
     motionAngle = ui->sliderMotionAngle->value();
-    ui->labelMotionAngle->setText(QString::number(motionAngle) + "°");
+    ui->labelMotionAngle->setText(QString::number(motionAngle) + QChar(0x00B0 /* degree symbol */));
     updatePreviewDeconvolution();
 }
 
